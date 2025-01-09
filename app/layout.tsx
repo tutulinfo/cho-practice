@@ -1,4 +1,3 @@
-import React from "react";
 import "./globals.css";
 
 interface Props {
@@ -8,7 +7,12 @@ interface Props {
 const layout = ({ children }: Props) => {
   return (
     <html>
-      <head></head>
+      <head>
+        <style>
+          @import
+          url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+        </style>
+      </head>
       <body>
         <div>{children}</div>
       </body>
