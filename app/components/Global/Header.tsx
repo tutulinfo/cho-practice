@@ -52,10 +52,10 @@ const Header = () => {
     },
   ];
   return (
-    <header className="shadow relative hidden md:block">
+    <header className="shadow hidden md:block">
       {/* Header top/contact part */}
       <div className=" bg-matGroen ">
-        <div className="max-w-5xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
+        <div className=" max-w-6xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
           {contactInfo.map((item, index) => {
             return <HeaderContactInfo key={index} contactInfo={item} />;
           })}
@@ -63,17 +63,19 @@ const Header = () => {
       </div>
 
       {/* Header logo and nav part */}
-      <div className="bg-white py-4">
-        <div className="max-w-5xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
+      <div className="bg-white py-4 ">
+        <div className="relative max-w-6xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
           <Link
             href="/"
-            className="absolute top-0 bottom-0 left-4 sm:left-8 xl:left-1/2 transform xl:-translate-x-[620px] bg-white"
+            className="absolute top-0 left-4 w-auto h-full transform -translate-y-14 bg-black"
           >
             <Image src={Logo} alt="Logo" height={120} />
           </Link>
+
+          {/* Nav */}
           <nav className="">
             <ul className="flex justify-center items-center space-x-2">
-              <li className="flex justify-center items-center space-x-4 divide-x-2 divide-koraal">
+              <li className="flex justify-center items-center space-x-2 divide-x-2 divide-koraal">
                 {navItems.map((item, index) => {
                   return <NavItem key={index} navItems={item} />;
                 })}
