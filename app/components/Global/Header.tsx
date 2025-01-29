@@ -1,6 +1,7 @@
 import ClockIcon from "../../../public/assets/icons/clock-outline.svg";
 import CallIcon from "../../../public/assets/icons/call.svg";
 import EmailIcon from "../../../public/assets/icons/email-outline.svg";
+import MobileMenu from "../../../public/assets/icons/hamburger.svg";
 import HeaderContactInfo from "./HeaderContactInfo";
 import Image from "next/image";
 import Logo from "../../../public/assets/logo.png";
@@ -52,28 +53,30 @@ const Header = () => {
     },
   ];
   return (
-    <header className="shadow hidden md:block">
+    <header className="shadow ">
       {/* Header top/contact part */}
-      <div className=" bg-matGroen ">
-        <div className=" max-w-6xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
-          {contactInfo.map((item, index) => {
-            return <HeaderContactInfo key={index} contactInfo={item} />;
-          })}
+      <div className="relative bg-matGroen h-10 w-full">
+        <div className="hidden md:block">
+          <div className="max-w-6xl mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
+            {contactInfo.map((item, index) => {
+              return <HeaderContactInfo key={index} contactInfo={item} />;
+            })}
+          </div>
         </div>
       </div>
 
       {/* Header logo and nav part */}
-      <div className="bg-white py-4 ">
-        <div className="relative max-w-6xl mx-auto flex justify-end items-center px-8 py-2 space-x-6">
-          <Link
-            href="/"
-            className="absolute top-0 left-4 w-auto h-full transform -translate-y-14 bg-black"
-          >
-            <Image src={Logo} alt="Logo" height={120} />
+      <div className="bg-white py-4">
+        <div className="max-w-6xl mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
+          <Link href="/" className="absolute top-0 left-4 lg:left-8 bg-white">
+            <Image src={Logo} alt="Logo" height={110} />
           </Link>
 
           {/* Nav */}
-          <nav className="">
+          <button className="h-6 w-6 bg-white block md:hidden">
+            <Image src={MobileMenu} alt="Mobile Menu" width={24} />
+          </button>
+          <nav className="hidden md:block">
             <ul className="flex justify-center items-center space-x-2">
               <li className="flex justify-center items-center space-x-2 divide-x-2 divide-koraal">
                 {navItems.map((item, index) => {

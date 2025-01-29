@@ -17,11 +17,9 @@ const layout = ({ children }: Props) => {
           url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */}
         </style>
       </head>
-      <body>
+      <body className="w-full">
         <Header />
-        <div className="max-w-6xl px-8 mx-auto bg-red-200 min-h-screen">
-          {children}
-        </div>
+        <div className="">{children}</div>
         <Footer />
       </body>
     </html>

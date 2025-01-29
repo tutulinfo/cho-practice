@@ -10,12 +10,12 @@ interface ContactInfo {
 
 interface Props {
   contactInfo: ContactInfo;
-  key: number;
+  i: number;
 }
-const HeaderContactInfo = ({ contactInfo, key }: Props) => {
+const HeaderContactInfo = ({ contactInfo, i }: Props) => {
   return (
     <Link
-      key={key}
+      key={i}
       href={contactInfo.href}
       className="flex justify-start items-center space-x-2 text-sm font-normal text-white"
     >
