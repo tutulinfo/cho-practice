@@ -57,9 +57,9 @@ const Header = () => {
       {/* Header top/contact part */}
       <div className="relative bg-matGroen h-10 w-full">
         <div className="hidden md:block">
-          <div className="max-w-6xl mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
-            {contactInfo.map((item, index) => {
-              return <HeaderContactInfo key={index} contactInfo={item} />;
+          <div className=" mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
+            {contactInfo.map((item, i) => {
+              return <HeaderContactInfo key={i} contactInfo={item} />;
             })}
           </div>
         </div>
@@ -67,7 +67,7 @@ const Header = () => {
 
       {/* Header logo and nav part */}
       <div className="bg-white py-4">
-        <div className="max-w-6xl mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
+        <div className=" mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
           <Link href="/" className="absolute top-0 left-4 lg:left-8 bg-white">
             <Image src={Logo} alt="Logo" height={110} />
           </Link>

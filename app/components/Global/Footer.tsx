@@ -43,15 +43,18 @@ const Footer = () => {
   return (
     <div className=" bg-[#f4f4f4]">
       {/* Footer top content */}
-      <div className="max-w-6xl mx-auto flex justify-between items-start px-8 py-8 space-x-40">
-        <Link href="/" className="">
-          <Image src={Logo} alt="Logo" height={160} />
-        </Link>
-        <div className="flex justify-start items-start space-x-16">
+      <div className="w-full mx-auto flex flex-col md:flex-row justify-between items-start px-4 md:px-8 py-8 space-y-4 md:space-y-0 md:space-x-16">
+        <div className="xl:w-full">
+          <Link href="/" className="">
+            <Image src={Logo} alt="Logo" height={160} />
+          </Link>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-start w-full space-y-4 md:space-y-0 md:space-x-8">
           {footerContents.map((item, index) => {
             return <FooterLInks footerContent={item} key={index} />;
           })}
         </div>
+        {/* </div> */}
 
         {/* <div>Site map</div>
         <div>Support</div>

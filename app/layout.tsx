@@ -20,7 +20,7 @@ const layout = ({ children }: Props) => {
       <body className="w-full">
         <Header />
         <div className="">{children}</div>
-        <Footer />
+        <Footer />r
       </body>
     </html>
   );
