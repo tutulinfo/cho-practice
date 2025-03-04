@@ -43,7 +43,7 @@ const Footer = () => {
   return (
     <div className=" bg-[#f4f4f4]">
       {/* Footer top content */}
-      <div className="w-full mx-auto flex flex-col md:flex-row justify-between items-start px-4 md:px-8 py-8 space-y-4 md:space-y-0 md:space-x-16">
+      <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start px-4 lg:px-8 py-8 space-y-4 md:space-y-0 md:space-x-16">
         <div className="xl:w-full">
           <Link href="/" className="">
             <Image src={Logo} alt="Logo" height={160} />

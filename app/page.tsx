@@ -1,15 +1,14 @@
 import React from "react";
-import FilledButton from "./components/Global/FilledButton";
-import OutlineButton from "./components/Global/OutlineButton";
-import HeroSection from "./HeroSection";
+import HeroSection from "./HomePage/HeroSection";
+import Courses from "./components/Global/Courses";
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <p className="">Test</p>
-      <FilledButton label="Example" /> <br />
-      <OutlineButton label="Example" />
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 py-8 space-y-4 md:space-y-0 md:space-x-16">
+        <Courses />
+      </div>
     </div>
   );
 };

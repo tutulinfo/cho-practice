@@ -36,28 +36,28 @@ const Header = () => {
       href: "/",
     },
     {
-      name: "Ons Aanbod",
-      href: "/ons-aanbod",
+      name: "Our Offer",
+      href: "/our-offer",
     },
     {
-      name: "Incompany en Maatwerk",
-      href: "/incompany-en-maatwerk",
+      name: "Incompany courses",
+      href: "/incompany-courses",
     },
     {
       name: "Supervisie",
       href: "/supervisie",
     },
     {
-      name: "Onze Docenten",
-      href: "/onze-docenten",
+      name: "Our Teachers",
+      href: "/our-teachers",
     },
   ];
   return (
-    <header className="shadow ">
+    <header className="shadow">
       {/* Header top/contact part */}
       <div className="relative bg-matGroen h-10 w-full">
         <div className="hidden md:block">
-          <div className=" mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
+          <div className="max-w-screen-2xl mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
             {contactInfo.map((item, i) => {
               return <HeaderContactInfo key={i} contactInfo={item} />;
             })}
@@ -66,25 +66,32 @@ const Header = () => {
       </div>
 
       {/* Header logo and nav part */}
-      <div className="bg-white py-4">
-        <div className=" mx-auto flex justify-end items-center px-4 lg:px-8 py-2 space-x-6">
-          <Link href="/" className="absolute top-0 left-4 lg:left-8 bg-white">
-            <Image src={Logo} alt="Logo" height={110} />
+      <div className="h-20 bg-white py-4">
+        <div className=" max-w-screen-2xl mx-auto flex justify-between items-center px-4 lg:px-8 py-2 space-x-6">
+          {/* Logo */}
+          <Link href="/" className="absolute top-0 h-[120px]">
+            <Image
+              src={Logo}
+              alt="Logo"
+              className="h-full w-auto object-cover"
+            />
           </Link>
 
-          {/* Nav */}
-          <button className="h-6 w-6 bg-white block md:hidden">
-            <Image src={MobileMenu} alt="Mobile Menu" width={24} />
-          </button>
-          <nav className="hidden md:block">
-            <ul className="flex justify-center items-center space-x-2">
-              <li className="flex justify-center items-center space-x-2 divide-x-2 divide-koraal">
-                {navItems.map((item, index) => {
-                  return <NavItem key={index} navItems={item} />;
-                })}
-              </li>
-            </ul>
-          </nav>
+          <div className="w-full flex justify-end items-center space-x-6 ml-auto">
+            {/* Nav */}
+            <button className="h-6 w-6 bg-white block md:hidden">
+              <Image src={MobileMenu} alt="Mobile Menu" width={24} />
+            </button>
+            <nav className="hidden md:block">
+              <ul className="flex justify-center items-center space-x-2">
+                <li className="flex justify-center items-center space-x-2 divide-x-2 divide-koraal">
+                  {navItems.map((item, index) => {
+                    return <NavItem key={index} navItems={item} />;
+                  })}
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
