@@ -36,16 +36,16 @@ const Header = () => {
       href: "/",
     },
     {
-      name: "Our Offer",
-      href: "/our-offer",
+      name: "Training Courses",
+      href: "/training-courses",
     },
     {
-      name: "Incompany courses",
-      href: "/incompany-courses",
+      name: "In-company & Customized",
+      href: "/in-company-customized",
     },
     {
-      name: "Supervisie",
-      href: "/supervisie",
+      name: "Supervision",
+      href: "/supervision",
     },
     {
       name: "Our Teachers",

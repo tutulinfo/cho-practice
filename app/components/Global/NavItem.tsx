@@ -14,7 +14,7 @@ const NavItem = ({ navItems, key }: Props) => {
     <Link
       href={navItems.href}
       key={key}
-      className="pl-2 py-1 text-base lg:text-lg font-normal text-kobalt hover:text-oker"
+      className="pl-2 py-1 text-base lg:text-lg font-normal text-kobalt hover:text-oker active:text-koraal"
     >
       {navItems.name}
     </Link>

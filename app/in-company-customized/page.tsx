@@ -1,13 +1,10 @@
 import React from "react";
-import SupervisionBG from "../../public/assets/cho-ot-bg.jpg";
 import BannerSection from "../components/Global/Banner";
+import IncompanyBG from "../../public/assets/cho-ot-bg.jpg";
 
-const ourTeacherPage = () => {
+const incompanyCoursesPage = () => {
   const bannerInfo = [
-    {
-      name: "Our Teachers",
-      bgImage: SupervisionBG,
-    },
+    { name: "In-company & Customized ", bgImage: IncompanyBG },
   ];
   return (
     <div>
@@ -16,8 +13,13 @@ const ourTeacherPage = () => {
           return <BannerSection bannerInfo={item} key={i} />;
         })}
       </section>
+      <div>
+        <section>
+          <p>test</p>
+        </section>
+      </div>
     </div>
   );
 };
 
-export default ourTeacherPage;
+export default incompanyCoursesPage;

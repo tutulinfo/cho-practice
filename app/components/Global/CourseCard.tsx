@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Courses from "./Courses";
 
 interface CourseCard {
   imageSrc?: any;

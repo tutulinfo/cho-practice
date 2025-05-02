@@ -1,11 +1,11 @@
 import React from "react";
-import SupervisionBG from "../../public/assets/cho-ot-bg.jpg";
+import SupervisionBG from "../../public/assets/cho-supervision-bg.jpg";
 import BannerSection from "../components/Global/Banner";
 
-const ourTeacherPage = () => {
+const supervisionPage = () => {
   const bannerInfo = [
     {
-      name: "Our Teachers",
+      name: "Supervision",
       bgImage: SupervisionBG,
     },
   ];
@@ -20,4 +20,4 @@ const ourTeacherPage = () => {
   );
 };
 
-export default ourTeacherPage;
+export default supervisionPage;
